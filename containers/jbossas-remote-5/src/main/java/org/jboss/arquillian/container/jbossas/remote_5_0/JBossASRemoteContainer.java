@@ -122,7 +122,7 @@ public class JBossASRemoteContainer implements DeployableContainer
          {
             public void handle(HttpExchange exchange) throws IOException
             {
-               InputStream zip = archive.as(ZipExporter.class).exportZip();
+               InputStream zip = archive.as(ZipExporter.class).export();
                ByteArrayOutputStream zipStream = new ByteArrayOutputStream();
                JBossASRemoteContainer.copy(zip, zipStream);
                zip.close();
