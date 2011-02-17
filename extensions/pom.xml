@@ -27,4 +27,24 @@
     <module>selenium</module>
   </modules>
 
+  <build>
+    <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <executions>
+               <execution>
+                  <id>default-deploy</id>
+                  <goals>
+                     <goal>deploy</goal>
+                  </goals>
+                  <configuration>
+                     <skip>false</skip>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+    </plugins>
+  </build>
+
 </project>
